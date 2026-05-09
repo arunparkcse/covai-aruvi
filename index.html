@@ -46,10 +46,11 @@
     body { font-family:'Poppins','Noto Sans Tamil',sans-serif; background:var(--cream); color:var(--text); line-height:1.7; overflow-x:hidden; }
 
     /* ── ANIMATIONS ── */
-    .anim { opacity:0; transform:translateY(35px); transition:opacity 0.65s ease, transform 0.65s ease; }
-    .anim.from-left  { transform:translateX(-35px); }
-    .anim.from-right { transform:translateX(35px); }
-    .anim.visible    { opacity:1 !important; transform:translate(0,0) !important; }
+    .anim { opacity:1; transform:none; transition:opacity 0.65s ease, transform 0.65s ease; }
+    .anim.will-animate { opacity:0; transform:translateY(35px); }
+    .anim.will-animate.from-left  { transform:translateX(-35px); }
+    .anim.will-animate.from-right { transform:translateX(35px); }
+    .anim.visible { opacity:1 !important; transform:translate(0,0) !important; }
     .d1{transition-delay:.08s} .d2{transition-delay:.16s} .d3{transition-delay:.24s}
     .d4{transition-delay:.32s} .d5{transition-delay:.40s} .d6{transition-delay:.48s}
 
@@ -520,5 +521,4 @@
   <div class="product-grid">
 
     <div class="product-card anim d1" data-cat="spice">
-      <div class="img-wrap" onclick="openLB('green-cardamom-elachi-covai-aruvi.jpg','Green Cardamom – ஏலக்காய்')">
-        <i
+      <div class="img-wrap" onclick="openLB('green-cardamom-elachi
