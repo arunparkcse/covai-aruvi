@@ -176,26 +176,35 @@
     .c-dot.active { background:#fff; width:24px; border-radius:4px; border-color:#fff; }
 
     @media(max-width:640px){
-      .carousel    { height:100svh; min-height:500px; max-height:none; }
-      .c-slide     { flex-direction:column; justify-content:flex-end; align-items:flex-start; }
+      .carousel { height:100svh; min-height:500px; max-height:none; }
+
+      /* Remove colored gradient — dark bg only so image is clear */
+      .c-slide.s1,.c-slide.s2,.c-slide.s3,
+      .c-slide.s4,.c-slide.s5,.c-slide.s6 { background:#111 !important; }
+
+      .c-slide { flex-direction:column; justify-content:flex-end; align-items:flex-start; }
+
+      /* Product image fills the full slide as a background */
       .slide-right {
         position:absolute; inset:0; width:100%; height:100%;
         display:flex; align-items:center; justify-content:center;
-        padding:0; opacity:0.22; pointer-events:none;
+        padding:0; opacity:1; pointer-events:none;
       }
       .slide-right img {
-        width:90%; max-height:80vh; object-fit:contain;
-        animation:none; filter:none;
-        border-radius:0;
+        width:100%; height:100%; object-fit:cover;
+        animation:none; border-radius:0;
+        filter:brightness(0.6);
       }
-      .slide-left  {
+
+      /* Text pinned to bottom with subtle dark gradient only */
+      .slide-left {
         position:relative; z-index:3;
         padding:0 6vw 5rem; max-width:100%; width:100%;
-        background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
+        background:linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.2) 80%, transparent 100%);
       }
       .slide-title { font-size:clamp(1.6rem,8vw,2.4rem); }
       .slide-tamil { font-size:1rem; }
-      .slide-desc  { font-size:0.85rem; display:none; }
+      .slide-desc  { display:none; }
       .slide-tag   { font-size:0.7rem; margin-bottom:0.6rem; }
       .slide-price { font-size:0.95rem; }
       .slide-btn   { font-size:0.82rem; padding:0.55rem 1.2rem; }
@@ -512,8 +521,4 @@
 
     <div class="product-card anim d1" data-cat="spice">
       <div class="img-wrap" onclick="openLB('green-cardamom-elachi-covai-aruvi.jpg','Green Cardamom – ஏலக்காய்')">
-        <img src="green-cardamom-elachi-covai-aruvi.jpg" alt="Green Cardamom Elachi – Covai Aruvi Coimbatore"/>
-        <span class="price-tag">₹5 / pack</span><span class="zoom-hint">🔍</span>
-      </div>
-      <div class="card-body">
-        <div class="card-name">Green Cardamom</div><div class="
+        <i
