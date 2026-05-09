@@ -45,14 +45,16 @@
     html { scroll-behavior: smooth; }
     body { font-family:'Poppins','Noto Sans Tamil',sans-serif; background:var(--cream); color:var(--text); line-height:1.7; overflow-x:hidden; }
 
-    /* ── ANIMATIONS ── */
-    .anim { opacity:1; transform:none; transition:opacity 0.65s ease, transform 0.65s ease; }
-    .anim.will-animate { opacity:0; transform:translateY(35px); }
-    .anim.will-animate.from-left  { transform:translateX(-35px); }
-    .anim.will-animate.from-right { transform:translateX(35px); }
-    .anim.visible { opacity:1 !important; transform:translate(0,0) !important; }
-    .d1{transition-delay:.08s} .d2{transition-delay:.16s} .d3{transition-delay:.24s}
-    .d4{transition-delay:.32s} .d5{transition-delay:.40s} .d6{transition-delay:.48s}
+    /* ── ANIMATIONS — elements always visible; animation is enhancement only ── */
+    @keyframes fadeUp    { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeLeft  { from{opacity:0;transform:translateX(-30px)} to{opacity:1;transform:translateX(0)} }
+    @keyframes fadeRight { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
+    .anim { opacity:1; }
+    .anim.played              { animation:fadeUp    0.6s ease both; }
+    .anim.from-left.played    { animation:fadeLeft  0.6s ease both; }
+    .anim.from-right.played   { animation:fadeRight 0.6s ease both; }
+    .d1{animation-delay:.08s} .d2{animation-delay:.16s} .d3{animation-delay:.24s}
+    .d4{animation-delay:.32s} .d5{animation-delay:.40s} .d6{animation-delay:.48s}
 
     /* ── NAV ── */
     nav {
@@ -515,10 +517,4 @@
   <div class="filter-tabs anim d1">
     <button class="filter-btn active" data-f="all">All</button>
     <button class="filter-btn" data-f="spice">🫚 Spices</button>
-    <button class="filter-btn" data-f="dry">🥜 Dry Fruits</button>
-    <button class="filter-btn" data-f="combo">🎁 Combo</button>
-  </div>
-  <div class="product-grid">
-
-    <div class="product-card anim d1" data-cat="spice">
-      <div class="img-wrap" onclick="openLB('green-cardamom-elachi
+    <button class="filter-btn" data-f="dry">🥜 Dr
