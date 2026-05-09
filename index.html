@@ -45,16 +45,7 @@
     html { scroll-behavior: smooth; }
     body { font-family:'Poppins','Noto Sans Tamil',sans-serif; background:var(--cream); color:var(--text); line-height:1.7; overflow-x:hidden; }
 
-    /* ── ANIMATIONS — elements always visible; animation is enhancement only ── */
-    @keyframes fadeUp    { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeLeft  { from{opacity:0;transform:translateX(-30px)} to{opacity:1;transform:translateX(0)} }
-    @keyframes fadeRight { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
-    .anim { opacity:1; }
-    .anim.played              { animation:fadeUp    0.6s ease both; }
-    .anim.from-left.played    { animation:fadeLeft  0.6s ease both; }
-    .anim.from-right.played   { animation:fadeRight 0.6s ease both; }
-    .d1{animation-delay:.08s} .d2{animation-delay:.16s} .d3{animation-delay:.24s}
-    .d4{animation-delay:.32s} .d5{animation-delay:.40s} .d6{animation-delay:.48s}
+    
 
     /* ── NAV ── */
     nav {
@@ -154,7 +145,7 @@
       width:100%; max-height:72vh; object-fit:contain;
       border-radius:20px;
       filter:drop-shadow(0 12px 40px rgba(0,0,0,0.45));
-      animation:float 4s ease-in-out infinite;
+     ation:float 4s ease-in-out infinite;
     }
     @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
 
@@ -195,7 +186,7 @@
       }
       .slide-right img {
         width:100%; height:100%; object-fit:cover;
-        animation:none; border-radius:0;
+       ation:none; border-radius:0;
         filter:brightness(0.6);
       }
 
@@ -279,7 +270,7 @@
     .open-time { color:#27AE60; font-weight:700; }
     .closed-time { color:var(--red); font-weight:700; }
     .status-pill { display:inline-flex; align-items:center; gap:0.4rem; background:#EAFAF1; color:#1E8449; border-radius:50px; font-size:0.75rem; font-weight:700; padding:0.25rem 0.75rem; margin-bottom:1rem; }
-    .pulse-dot { width:7px; height:7px; border-radius:50%; background:#27AE60; animation:pulse 1.5s infinite; }
+    .pulse-dot { width:7px; height:7px; border-radius:50%; background:#27AE60;ation:pulse 1.5s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.4;} }
     .fssai-box { margin-top:1.2rem; background:#EBF5FB; border-radius:8px; padding:0.65rem 0.9rem; font-size:0.78rem; color:#1A5276; display:flex; align-items:center; gap:0.5rem; font-weight:500; }
     .address-box { margin-top:0.8rem; background:var(--cream2); border-radius:8px; padding:0.65rem 0.9rem; font-size:0.82rem; color:var(--muted); display:flex; align-items:flex-start; gap:0.5rem; line-height:1.5; border:1px solid rgba(0,0,0,0.06); }
@@ -325,8 +316,8 @@
     #backTop:hover { background:var(--red-dark); }
 
     /* ── WA FLOAT ── */
-    .wa-float { position:fixed; bottom:26px; right:22px; z-index:999; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,0.5); text-decoration:none; animation:wab 2.4s ease infinite; }
-    .wa-float:hover { animation:none; transform:scale(1.1); }
+    .wa-float { position:fixed; bottom:26px; right:22px; z-index:999; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,0.5); text-decoration:none;ation:wab 2.4s ease infinite; }
+    .wa-float:hover {ation:none; transform:scale(1.1); }
     .wa-float svg { width:30px; height:30px; fill:#fff; }
     @keyframes wab { 0%,100%{transform:scale(1);}50%{transform:scale(1.07);} }
 
@@ -485,19 +476,19 @@
 <!-- ═══ ABOUT ═══ -->
 <section class="about" id="about">
   <div class="about-inner">
-    <div class="about-text anim from-left">
+    <div class="about-text">
       <p class="section-label">About Us</p>
       <h2 class="section-title">A Tradition of Pure Flavours</h2>
       <p>Covai Aruvi is a trusted name in Coimbatore for premium-quality spices and dry fruits. We carefully source the finest ingredients and repack them in freshness-sealed pouches so every pinch and every bite delivers the authentic taste of nature.</p>
       <p>From everyday cooking essentials like cumin and cinnamon to premium dry fruits like almonds and cashews, our entire range is priced affordably — starting at just ₹5 — because good food should be accessible to every home.</p>
       <div class="stats-grid">
-        <div class="stat-card anim d1"><div class="stat-num" data-to="9">0</div><div class="stat-lbl">Product Varieties</div></div>
-        <div class="stat-card anim d2"><div class="stat-num">₹5</div><div class="stat-lbl">Starting Price</div></div>
-        <div class="stat-card anim d3"><div class="stat-num" data-to="100">0</div><div class="stat-lbl">% Natural &amp; Veg</div></div>
-        <div class="stat-card anim d4"><div class="stat-num">FSSAI</div><div class="stat-lbl">Certified Quality</div></div>
+        <div class="stat-card"><div class="stat-num">9+</div><div class="stat-lbl">Product Varieties</div></div>
+        <div class="stat-card"><div class="stat-num">₹5</div><div class="stat-lbl">Starting Price</div></div>
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-lbl">% Natural &amp; Veg</div></div>
+        <div class="stat-card"><div class="stat-num">FSSAI</div><div class="stat-lbl">Certified Quality</div></div>
       </div>
     </div>
-    <div class="about-img-grid anim from-right">
+    <div class="about-img-grid">
       <img src="covai-aruvi-spices-brand-packaging.jpg" alt="Covai Aruvi Brand Packaging – Premium Spices"/>
       <img src="mixed-spices-combo-pack-covai-aruvi.jpg" alt="Mixed Spices Combo Pack – Covai Aruvi"/>
       <img src="raisins-dry-grapes-kismis-covai-aruvi.jpg" alt="Raisins Dry Grapes – Covai Aruvi"/>
@@ -507,14 +498,14 @@
 
 <!-- ═══ PRODUCTS ═══ -->
 <section class="products" id="products">
-  <div class="products-header anim">
+  <div class="products-header">
     <div>
       <p class="section-label">Our Products</p>
       <h2 class="section-title">Fresh From Nature's Best</h2>
     </div>
     <a href="https://wa.me/919688901234?text=Hi%20Covai%20Aruvi!%20I%27d%20like%20to%20place%20a%20bulk%20order." target="_blank" style="background:var(--red);color:#fff;padding:0.6rem 1.4rem;border-radius:50px;font-weight:700;font-size:0.88rem;text-decoration:none;white-space:nowrap;">Bulk Order →</a>
   </div>
-  <div class="filter-tabs anim d1">
+  <div class="filter-tabs">
     <button class="filter-btn active" data-f="all">All</button>
     <button class="filter-btn" data-f="spice">🫚 Spices</button>
-    <button class="filter-btn" data-f="dry">🥜 Dr
+    <button class="filter-btn" data-f="dry">🥜 Dr                      
